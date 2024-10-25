@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Cards</title>
+    <link rel="stylesheet" href="Assets/Styles/index.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="Assets/Scripts/index.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="loginView">
+            <h1>Welcome to Trade Cards</h1>
+            <button onclick="signInWithGoogle()">Login with Google</button>
+        </div>
+
+        <div id="createProfileView" style="display: none;">
+            <h2>Create Your Profile</h2>
+            <form id="profileForm">
+                <input type="text" id="username" placeholder="Enter a unique username" required>
+                <input type="number" id="age" placeholder="Enter your age" required>
+                <button type="button" onclick="saveProfile()">Save Profile</button>
+            </form>
+        </div>
+
+        <div id="editProfileView" style="display: none;">
+            <h2>Edit Your Profile</h2>
+            <form id="editProfileForm">
+                <input type="text" id="editUsername" placeholder="Edit your username" required>
+                <input type="number" id="editAge" placeholder="Edit your age" required>
+                <button type="button" onclick="updateProfile()">Update Profile</button>
+            </form>
+            <button onclick="signOut()">Logout</button>
+        </div>
+    </div>
+</body>
+
+</html>
